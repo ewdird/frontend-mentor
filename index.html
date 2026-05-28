@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karta Produktu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { 
+      box-sizing: border-box;
+      margin: 0; 
+      padding: 0; 
+    }
+    body {
+      background-color: hsl(30, 38%, 92%);
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 400px;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .karta {
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-width: 343px;
+    }
+    .karta_zdj {
+      background-image: url('./images/image-product-mobile.jpg');
+      background-size: cover;
+    }
+    .tekst {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .perfume {
+      font-weight: bold;
+      font-size: xx-large;
+      color: hsl(228, 12%, 48%);
+    }
+    .tytul {
+      font-family: 'Fraunces', serif;
+      color: hsl(212, 21%, 14%);
+    }
+    .opis {
+      color: hsl(228, 12%, 48%);
+      gap: 10px;
+    }
+    .ceny {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .akt_cena {
+      font-family: 'Fraunces', serif;
+      color: hsl(158, 36%, 37%);
+      font-size: x-large;
+    }
+    .stara_cena {
+      color: hsl(228, 12%, 48%);
+      text-decoration: line-through;
+    }
+    .przycisk {
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .przycisk:hover { background-color: hsl(158, 42%, 18%); }
+    @media (min-width: 600px) {
+      .karta { 
+        flex-direction: row;
+        max-width: 600px; 
+        }
+      .karta_zdj { 
+        background-image: url('./images/image-product-desktop.jpg'); 
+        height: 450px; width: 50%; 
+      }
+      .tekst { 
+        width: 50%; 
+        padding: 40px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="karta">
+    <div class="karta_zdj"></div>
+    <div class="tekst">
+      <p class="perfume">Perfume</p>
+      <h1 class="tytul">Gabrielle Essence Eau De Parfum</h1>
+      <p class="opis">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+      <div class="ceny">
+        <div class="akt_cena">$149.99</div>
+        <div class="stara_cena">$169.99</div>
+      </div>
+      <button class="przycisk">
+        <img src="./images/icon-cart.svg" alt=""> Add to Cart
+      </button>
+    </div>
+  </main>
+</body>
+</html>
